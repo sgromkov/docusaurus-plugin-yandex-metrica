@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-plugin-yandex-metrica",
-  "version": "0.0.3",
-  "description": "Yandex.Metrica plugin for Docusaurus v2.",
+  "version": "1.0.0",
+  "description": "Yandex Metrica plugin for Docusaurus v2.",
   "main": "src/index.js",
   "publishConfig": {
     "access": "public"
@@ -16,13 +16,14 @@
     "url": "https://github.com/sgromkov/docusaurus-plugin-yandex-metrica/issues"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.6"
+    "@docusaurus/core": "2.0.0-beta.19",
+    "@docusaurus/utils-validation": "2.0.0-beta.19"
   },
   "peerDependencies": {
     "react": "^16.8.4 || ^17.0.0",
     "react-dom": "^16.8.4 || ^17.0.0"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=14"
   }
 }
