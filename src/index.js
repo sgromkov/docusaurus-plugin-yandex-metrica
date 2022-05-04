@@ -2,12 +2,19 @@ const path = require('path');
 
 module.exports = function (context) {
   const {siteConfig} = context;
-  const {themeConfig} = siteConfig;
-  const {ym} = themeConfig || {};
+  const {customFields} = siteConfig;
+
+  if(!customFields) {
+    throw new Error(
+      `You need to specify "customFields" with "ym" object in "themeConfig" with "counterID" field in it to use docusaurus-plugin-yandex-metrica.`,
+    );
+  }
+
+  const {ym} = customFields || {}
 
   if (!ym) {
     throw new Error(
-      `You need to specify "ym" object in "themeConfig" with "counterID" field in it to use docusaurus-plugin-yandex-metrica.`,
+      `You need to specify "ym" object in "customFields" with "counterID" field in it to use docusaurus-plugin-yandex-metrica.`,
     );
   }
 
@@ -15,7 +22,7 @@ module.exports = function (context) {
 
   if (!counterID) {
     throw new Error(
-      'You specified the "ym" object in "themeConfig" but the "counterID" field was missing. ' +
+      'You specified the "ym" object in "customFields" but the "counterID" field was missing. ' +
         'Please ensure this is not a mistake.',
     );
   }
