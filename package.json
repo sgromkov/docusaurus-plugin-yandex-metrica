@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-yandex-metrica",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yandex.Metrica plugin for Docusaurus v2.",
   "main": "src/index.js",
   "publishConfig": {

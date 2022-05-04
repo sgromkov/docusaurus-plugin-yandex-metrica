@@ -7,12 +7,10 @@ export default (function () {
   }
 
   const {
-    themeConfig: {
-      customFields: {
-          ym: {counterID},
-        },
-      }
-    } = siteConfig;
+    customFields: {
+        ym: {counterID},
+      },
+  } = siteConfig;
 
   return {
     onRouteUpdate({location}) {
