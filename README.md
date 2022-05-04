@@ -17,12 +17,10 @@ module.exports = {
   plugins: [
     'docusaurus-plugin-yandex-metrica'
   ],
-  themeConfig: {
-    customFields: {
-      ym: {
-        counterID: '86645179',
-      },
-    }
+  customFields: {
+    ym: {
+      counterID: '86645179',
+    },
   },
 };
 ```
