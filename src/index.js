@@ -31,6 +31,7 @@ module.exports = async function pluginYandexMetrika(context, options) {
     const {
         counterID,
         alternativeCdn = false,
+        enableInProdOnly = true,
     } = options;
 
     if (!counterID) {
@@ -40,6 +41,7 @@ module.exports = async function pluginYandexMetrika(context, options) {
     }
 
     const isProd = process.env.NODE_ENV === 'production';
+    const isEnabled = (enableInProdOnly && isProd) || !enableInProdOnly;
 
     return {
         name: 'docusaurus-plugin-yandex-metrica',
@@ -47,10 +49,10 @@ module.exports = async function pluginYandexMetrika(context, options) {
             actions.setGlobalData(options);
         },
         getClientModules() {
-            return isProd ? ['./events'] : [];
+            return isEnabled ? ['./events'] : [];
         },
         injectHtmlTags() {
-            if (!isProd) {
+            if (!isEnabled) {
                 return {};
             }
 
