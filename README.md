@@ -2,9 +2,9 @@
 
 [Yandex Metrica](https://metrika.yandex.ru) plugin for [Docusaurus v2](https://docusaurus.io/).
 
-### ⚠️ production only
+### ⚠️ Production only _(by default)_
 
-This plugin is always inactive in development and only active in production to avoid polluting the analytics statistics.
+By default this plugin inactive in development and only active in production to avoid polluting the analytics statistics.
 
 ## Installation
 
@@ -42,6 +42,7 @@ Accepted fields:
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `counterID` | `number` | **Required** | The tracking ID of your Metrica service. |
+| `enableInProdOnly` | `boolean` | `true` | Enable plugin only in Production or Development also |
 | `webvisor` | `boolean` | `false` | Enable Session Replay (Webvisor), scroll map, form analysis |
 | `ecommerce` | `string` | `false` | Enable E-commerce (to use it pass the "Container name") |
 | `trackHash` | `boolean` | `false` | Enable Hash tracking in the browser address bar |
