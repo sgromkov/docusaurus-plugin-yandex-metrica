@@ -1,6 +1,6 @@
 # 📦 docusaurus-plugin-yandex-metrica
 
-[Yandex Metrica](https://metrika.yandex.ru) plugin for [Docusaurus v2](https://docusaurus.io/).
+[Yandex Metrica](https://metrika.yandex.ru) plugin for [Docusaurus v3](https://docusaurus.io/).
 
 ### ⚠️ Production only _(by default)_
 

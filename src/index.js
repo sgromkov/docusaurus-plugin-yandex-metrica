@@ -13,7 +13,7 @@ const generateYmParamsString = function (params) {
     };
 
     const ymParams = {};
-    for (paramName in defaultYmParams) {
+    for (const paramName in defaultYmParams) {
         ymParams[paramName] = (paramName in params) ? params[paramName] : defaultYmParams[paramName];
     };
 
@@ -27,7 +27,7 @@ const generateYmParamsString = function (params) {
     return '{' + ymParamsString + '}';
 }
 
-module.exports = async function pluginYandexMetrika(context, options) {
+export default async function pluginYandexMetrika(context, options) {
     const {
         counterID,
         alternativeCdn = false,
