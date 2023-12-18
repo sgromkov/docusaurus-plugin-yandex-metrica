@@ -24,7 +24,7 @@ yarn add docusaurus-plugin-yandex-metrica
 Add the plugin and the counter ID to your `docusaurus.config.js`:
 
 ```js
-module.exports = {
+export default {
   plugins: [
     ['docusaurus-plugin-yandex-metrica', {
       counterID: '86645179',
