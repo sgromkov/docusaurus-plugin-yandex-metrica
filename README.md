@@ -1,6 +1,6 @@
 # 📦 docusaurus-plugin-yandex-metrica
 
-[Yandex Metrica](https://metrika.yandex.ru) plugin for [Docusaurus v2](https://docusaurus.io/).
+[Yandex Metrica](https://metrika.yandex.ru) plugin for [Docusaurus v3](https://docusaurus.io/).
 
 ### ⚠️ Production only _(by default)_
 
@@ -24,7 +24,7 @@ yarn add docusaurus-plugin-yandex-metrica
 Add the plugin and the counter ID to your `docusaurus.config.js`:
 
 ```js
-module.exports = {
+export default {
   plugins: [
     ['docusaurus-plugin-yandex-metrica', {
       counterID: '86645179',
